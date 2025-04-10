@@ -1,41 +1,53 @@
-# 🛒 API de Compras - *Vitto Store*
+# 🛍️ Front-End - *Vitto Store*
 
-Esta API foi desenvolvida com **FastAPI** e é responsável por gerenciar os pedidos realizados na loja online *Vitto Store*. O front-end da aplicação consome os dados da **FakeStore API**, enquanto esta API armazena os pedidos dos usuários em um banco de dados local (SQLite).
+Este é o front-end da aplicação **Vitto Store**, desenvolvido com **HTML, CSS e JavaScript** puro. Ele é responsável por exibir os produtos fornecidos pela API externa **FakeStore**, permitir a adição de produtos ao carrinho e interagir com a API interna (backend) para finalizar os pedidos.
 
 ---
 
-## 📦 Tecnologias Utilizadas
+## 🌐 Tecnologias Utilizadas
 
-- **FastAPI** (framework web assíncrono)
-- **SQLite** (banco de dados leve)
-- **Uvicorn** (servidor ASGI)
-- **Docker** (containerização da aplicação)
-- **FakeStore API** (serviço externo de produtos)
+- **HTML5**  
+- **CSS3**  
+- **JavaScript (ES6)**  
+- **FakeStore API** (https://fakestoreapi.com)  
+- **Docker** (para containerização)
 
 ---
 
 ## ⚙️ Pré-requisitos
 
-Para executar a aplicação localmente, é necessário ter instalado:
+Para executar o front-end localmente, é necessário ter:
 
-- [Python 3.10+](https://www.python.org/downloads/)
-- [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
+- [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)  
 
 ---
 
 ## ▶️ Executando com Docker
 
 Para executar, basta ir no terminal e ditar o comando:
+
 Constução da Imagem Docker - 
   ```bash
-  docker build -t loja-backend .
+  docker build -t loja-frontend .
   ```
 Rodar o container - 
 ```bash
-  docker run -p 8000:8000 loja-backend
+  docker run -p 8080:80 loja-frontend
 ```
+
+---
+
+##  🔗 Integrações
+
+📦 API Externa: FakeStore API
+URL: https://fakestoreapi.com/products
+
+Uso: listagem dos produtos no front-end
+
 ---
 
 ## 📊 Diagrama da Arquitetura
 
-[FakeStore API] ---> [ Front-End (HTML/JS) ] ---> [ Vitto Store API (FastAPI) ] ---> [ SQLite DB ]
+  [ FakeStore API ] ---> [ Front-End (HTML/CSS/JS) ] ---> [ Vitto Store API (FastAPI) ] ---> [ SQLite DB ]
+
+  
