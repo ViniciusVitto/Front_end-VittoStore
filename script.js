@@ -1,6 +1,5 @@
 const API_PRODUTOS = "https://fakestoreapi.com/products";
 
-// Buscar produtos da FakeStore API
 fetch(API_PRODUTOS)
     .then(res => res.json())
     .then(produtos => {
@@ -21,7 +20,6 @@ fetch(API_PRODUTOS)
     })
     .catch(error => console.error("Erro ao buscar produtos:", error));
 
-// Adicionar produto ao carrinho e salvar no localStorage
 function adicionarAoCarrinho(produtoId, nome, preco) {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
