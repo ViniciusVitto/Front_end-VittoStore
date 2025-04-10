@@ -28,7 +28,7 @@ function adicionarAoCarrinho(produtoId, nome, preco) {
     // Verificar se o item já está no carrinho
     let itemExistente = carrinho.find(item => item.produto_id === produtoId);
     if (itemExistente) {
-        itemExistente.quantidade += 1; 
+        itemExistente.quantidade += 1;  // Se já existir, aumenta a quantidade
     } else {
         carrinho.push({ produto_id: produtoId, nome, preco, quantidade: 1 });
     }
