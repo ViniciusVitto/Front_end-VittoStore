@@ -4,6 +4,10 @@ function carregarCarrinho() {
     let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
     const lista = document.getElementById("carrinho");
     lista.innerHTML = "";
+    
+    let total = carrinho.reduce((soma, item) => soma + item.preco * item.quantidade, 0);
+    document.getElementById("total").textContent = `Total a pagar: R$${total.toFixed(2)}`;
+
 
     if (carrinho.length === 0) {
         lista.innerHTML = "<p>Seu carrinho está vazio.</p>";
